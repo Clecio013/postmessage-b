@@ -12,9 +12,9 @@
     window.addEventListener('message', receiveMessage, false);
 
     function receiveMessage(event) {
-      if (event.origin === 'https://clecio-postmessage-a.netlify.app') {
+      // if (event.origin === 'https://clecio-postmessage-a.netlify.app') {
         alert('Received message: ' + event.data);
-      }
+      // }
     }
   </script>
 </body>
