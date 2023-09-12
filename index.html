@@ -9,14 +9,12 @@
   <h1>PostMessage B</h1>
 
   <script>
-    function listenMessage(msg) {
-      alert(msg);
-      console.log(msg)
-    }
-    if (window.addEventListener) {
-      window.addEventListener("message", listenMessage, false);
-    } else {
-        window.attachEvent("onmessage", listenMessage);
+    window.addEventListener('message', receiveMessage, false);
+
+    function receiveMessage(event) {
+      if (event.origin === 'https://clecio-postmessage-a.netlify.app') {
+        alert('Received message: ' + event.data);
+      }
     }
   </script>
 </body>
