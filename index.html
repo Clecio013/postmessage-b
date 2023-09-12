@@ -8,14 +8,6 @@
 <body>
   <h1>PostMessage B</h1>
 
-  <script>
-    window.addEventListener('message', receiveMessage, false);
-
-    function receiveMessage(event) {
-      // if (event.origin === 'https://clecio-postmessage-a.netlify.app') {
-        alert('Received message: ' + event.data);
-      // }
-    }
-  </script>
+  <iframe src="https://clecio-postmessage-a.netlify.app"></iframe>
 </body>
 </html>
