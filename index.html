@@ -9,8 +9,10 @@
   <h1>PostMessage B</h1>
 
   <script>
-    window.addEventListener('message', (message) => {
-      console.log(message.data)
+    window.addEventListener('message', (event) => {
+      if(event.origin === 'https://clecio-postmessage-a.netlify.app') {
+        console.log(event.data)
+      }
     })
   </script>
 </body>
